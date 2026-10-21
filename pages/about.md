@@ -18,22 +18,68 @@ padding: 6em
 # Look in _includes/feature for options to easily add features to the page
 ---
 
-## About CollectionBuilder CSV
+# About Closure Logic
+## Mapping Fasteners in Adaptive and Functional Clothing
+**Closure Logic** explores how closures and fasteners are used across adaptive, medical, functional, and protective clothing. The project brings together selected commercial products and relevant patents in a structured digital collection to examine how closure design relates to garment function and user needs.
+Closures can influence dressing independence, dexterity demands, medical access, caregiver assistance, comfort, safety, and adjustability. By comparing existing examples, this project seeks to identify common closure strategies and areas where current designs may not adequately address user needs.
+## About the Collection
+The collection examines zippers, magnets, hook-and-loop fasteners, snaps, buttons, buckles, and quick-release systems, alongside opening arrangements such as side openings.
 
-This demo collection features items from the University of Idaho Library's [Digital Collections](https://www.lib.uidaho.edu/digital/), and is build using [CollectionBuilder-CSV](https://github.com/CollectionBuilder/collectionbuilder-csv).
+Examples are selected from:
 
-CollectionBuilder-CSV is a "Stand Alone" template for creating digital collection and exhibit websites using Jekyll, given:
+- Adaptive apparel that addresses dressing and access needs.
+- Medical and health-related garments that support treatment, care, or medical access.
+- Protective and occupational clothing, including firefighter, military, and police apparel.
+- Selected functional and performance garments with closure features relevant to the project.
 
-- a CSV of collection metadata
-- a folder of images, PDFs, audio, or video files
+The collection focuses on how closures are used within garments, including their placement, operation, purpose, and relationship to intended users.
 
-Driven by your collection metadata, the template generates engaging visualizations to browse and explore your objects.
-The resulting static site can be hosted on any basic web server.
+## How the Collection Is Organized
+Records are organized in a master dataset using consistent descriptive fields, including:
 
-[CollectionBuilder](https://github.com/CollectionBuilder/) is an set of open source tools for creating digital collection and exhibit websites that are driven by metadata and powered by modern static web technology.
-See [CB Docs](https://collectionbuilder.github.io/cb-docs/) for detailed information.
+- Product or patent name
+- Brand, company, or patent assignee
+- Apparel category and garment type
+- Intended user and user or access need
+- Closure type and location
+- Method of operation
+- Closure purpose or function
+- Garment and closure materials
+- Product or patent description
+- Manufacturer-stated claims
+- Researcher notes and source references
 
-{% include feature/image.html objectid="demo_001" width="75" %} 
+A **controlled vocabulary** provides preferred terms, definitions, and coding rules to support consistent classification. Each record can describe multiple characteristics rather than assigning a garment to only one broad category.
+Manufacturer-stated claims are recorded separately from researcher-assigned categories to distinguish source information from interpretation.
 
-<!-- IMPORTANT!!! DELETE this comment and the include below when you are finished editing this page for your collection. The include below introduces about page features. They will show up on your collection's about page until you delete it.  -->
-{% include cb/about_the_about.md %} 
+## Project Goals
+The project aims to:
+
+1. Document selected closure systems used in clothing.
+2. Develop a standardized framework for describing and comparing them.
+3. Examine relationships among closure features, garment functions, and user needs.
+4. Identify recurring design strategies and potential gaps in the selected examples.
+5. Create an accessible digital resource for research, inclusive design, product development, and teaching.
+
+## Scope and Methods
+This project uses information from selected commercial products and relevant patents. Records are collected, coded, and reviewed using a documented classification framework.
+
+The collection is not intended to document every closure product or patent worldwide. Laboratory performance testing, human-subject usability testing, clinical evaluation, and the development of new garment or closure prototypes are outside the scope of this fellowship project.
+The dataset, vocabulary, and documentation are being refined as the project develops.
+
+## Project Team
+
+### Bahar H. Esfahani
+**Project Fellow and Lead**
+Responsible for data collection, coding, analysis, visualization, documentation, and presentation.
+
+### Dr. Rachel J. Eike
+**Faculty Advisor and Apparel Subject-Matter Expert**
+Provides guidance on apparel design, functional and adaptive clothing, terminology, and interpretation.
+
+### Erin Ridnour
+**Digital Scholarship Mentor**
+Provides guidance on project scope, controlled vocabulary, data organization, digital methods, visualization, and preservation.
+
+## Documentation and Preservation
+The project includes a structured master dataset, controlled vocabulary, and documentation of collection methods, data cleaning, and coding decisions.
