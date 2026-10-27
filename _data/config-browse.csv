@@ -5,3 +5,5 @@ creator,Creator,,,
 subject,,true
 location,,true,,,Location Depicted
 identifier,,,true,Identifier
+method_operation,Method of Operation,,,,
+closure_purpose,Closure Purpose,,,,

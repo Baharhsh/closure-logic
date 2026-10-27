@@ -3,6 +3,8 @@ title,Title,,,DCTERMS.title,headline
 creator,Creator,,,DCTERMS.creator,creator
 date,Date Created,,,DCTERMS.date,dateCreated
 description,Description,,,DCTERMS.description,description
+method_operation,Method of Operation,true,,,,
+closure_purpose,Closure Purpose,true,,,,
 subject,Subjects,true,,DCTERMS.subject,keywords
 location,Location,,,DCTERMS.coverage,contentLocation
 latitude,Latitude,,,,
