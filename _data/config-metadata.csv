@@ -1,17 +1,27 @@
 field,display_name,browse_link,external_link,dc_map,schema_map
 title,Title,,,DCTERMS.title,headline
-creator,Creator,,,DCTERMS.creator,creator
-date,Date Created,,,DCTERMS.date,dateCreated
 description,Description,,,DCTERMS.description,description
-method_operation,Method of Operation,true,,,,
-closure_purpose,Closure Purpose,true,,,,
-subject,Subjects,true,,DCTERMS.subject,keywords
-location,Location,,,DCTERMS.coverage,contentLocation
-latitude,Latitude,,,,
-longitude,Longitude,,,,
-source,Source,,,,
-identifier,Source Identifier,,,,
-type,Type,,,DCTERMS.type,
-format,Format,,,,encodingFormat
-language,Language,,,DCTERMS.language,
-rightsstatement,,,,DCTERMS.rights,license
+subject,Subjects,,,DCTERMS.subject,keywords
+record_id,Record ID,,,,
+record_type,Record Type,,,,
+closure_product_patent_name,Closure Product or Patent Name,,,,
+closure_type,Closure Type,,,,
+closure_location,Closure Location,,,,
+method_operation,Method of Operation,,,,
+closure_purpose,Closure Purpose or Function,,,,
+closure_materials,Closure Materials,,,,
+apparel_category,Apparel Category,,,,
+secondary_apparel_category,Secondary Apparel Categories,,,,
+wearable_product_form,Wearable Product Form,,,,
+intended_user_group,Intended User Group,,,,
+user_access_need,User or Access Need,,,,
+garment_product_name,Garment Product Name,,,,
+brand_company,Brand Company or Assignee,,,,
+garment_type,Garment Type,,,,
+garment_product_description,Product or Patent Description,,,,
+manufacturer_stated_claim,Manufacturer-Stated Claim,,,,
+notes,Researcher Notes,,,,
+source_url,Source Website,,true,,
+access_date,Access Date,,,,
+closure_product_image,Closure Image Link,,true,,
+garment_image,Garment Image Link,,true,,
