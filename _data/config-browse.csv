@@ -1,3 +1,4 @@
+field,display_name,btn,hidden,sort_name,facet_name
 closure_type,Closure Type,true,,,
 closure_location,Closure Location,true,,,
 method_operation,Method of Operation,,,,
