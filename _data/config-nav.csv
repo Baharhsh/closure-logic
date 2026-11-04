@@ -1,9 +1,9 @@
 display_name,stub,dropdown_parent
 Home,/,
 Browse,/browse.html,
-Subjects,/subjects.html,
-Locations,/locations.html,
-Map,/map.html,
-Timeline,/timeline.html,
+Closure Types,/subjects.html,
+Closure Locations,/locations.html,
+Glossary,/glossary.html,
+Analysis,/analysis.html,
 Data,/data.html,
 About,/about.html,
