@@ -9,7 +9,7 @@ about-featured-image: demo_031
 # set background-position for featured image, "center", "top", "bottom"
 position: bottom
 # major heading to display over featured image
-heading: About the Collection
+heading: About Closure Logic
 # paragraph text below heading in featured image
 sub-heading: 
 # additional padding added to the feature to increase size. Give value in em or px, e.g. "5em".
@@ -18,7 +18,6 @@ padding: 6em
 # Look in _includes/feature for options to easily add features to the page
 ---
 
-# About Closure Logic
 ## Mapping Fasteners in Adaptive and Functional Clothing
 **Closure Logic** explores how closures and fasteners are used across adaptive, medical, functional, and protective clothing. The project brings together selected commercial products and relevant patents in a structured digital collection to examine how closure design relates to garment function and user needs.
 Closures can influence dressing independence, dexterity demands, medical access, caregiver assistance, comfort, safety, and adjustability. By comparing existing examples, this project seeks to identify common closure strategies and areas where current designs may not adequately address user needs.
