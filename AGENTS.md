@@ -147,6 +147,12 @@ JEKYLL_ENV=production bundle exec jekyll build  # Build with analytics/meta tags
 bundle exec rake            # List available rake tasks
 ```
 
+## Accessibility Guidelines
+
+1. Ensure full WCAG 2.1 AA standards compliance.
+2. Reduced motion preferences should be respected throughout.
+
+
 ## Working Instructions
 
 When given a task:
