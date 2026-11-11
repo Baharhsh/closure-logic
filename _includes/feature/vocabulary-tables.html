@@ -1,0 +1,37 @@
+{% comment %}
+    Tables grouped by vocab_type from a vocabulary CSV in _data/.
+    Required columns: vocab_type, vocab_term, definition, synonyms.
+    Usage: {% include feature/vocabulary-tables.html data="closure-logic_controlled-vocabs" %}
+{% endcomment %}
+{%- assign vocabulary_rows = site.data[include.data] -%}
+{%- assign vocabulary_types = vocabulary_rows | map: 'vocab_type' | uniq -%}
+<div class="vocabulary-tables">
+  {% for vocabulary_type in vocabulary_types %}
+  {% assign vocabulary_terms = vocabulary_rows | where: 'vocab_type', vocabulary_type %}
+  {% assign vocabulary_id = include.data | append: '-' | append: vocabulary_type | slugify %}
+  <section class="vocabulary-section" aria-labelledby="{{ vocabulary_id }}">
+    <h3 id="{{ vocabulary_id }}">{{ vocabulary_type | capitalize | escape }}</h3>
+    <div class="table-responsive vocabulary-table-scroll" role="region" aria-labelledby="{{ vocabulary_id }}" tabindex="0">
+      <table class="table table-striped align-middle">
+        <caption class="visually-hidden">{{ vocabulary_type | capitalize | escape }}</caption>
+        <thead>
+          <tr>
+            <th scope="col">Term</th>
+            <th scope="col">Definition</th>
+            <th scope="col">Synonyms</th>
+          </tr>
+        </thead>
+        <tbody>
+          {% for vocabulary_term in vocabulary_terms %}
+          <tr>
+            <th scope="row">{{ vocabulary_term.vocab_term | escape }}</th>
+            <td>{{ vocabulary_term.definition | escape }}</td>
+            <td>{{ vocabulary_term.synonyms | default: '—' | escape }}</td>
+          </tr>
+          {% endfor %}
+        </tbody>
+      </table>
+    </div>
+  </section>
+  {% endfor %}
+</div>
