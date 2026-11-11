@@ -20,10 +20,10 @@ source-code: https://github.com/CollectionBuilder/collectionbuilder-csv
 # title of site appears in banner
 title: Closure Logic
 # tagline, a short phrase that will appear throughout the site in the top banner
-tagline: Exploring Different Types of Closures and Fasteners in Adaptive and Functional Clothing
+tagline: Mapping Fasteners in Adaptive and Functional Clothing
 # description appears in meta tags and other locations
 # this description might appear in search result lists, keep around 160 characters max
-description: "In this project we will explore different types of closures and fasteners used in adaptive and functional clothing. Sometimes small feastures in a clothing make a big differnce"
+description: "In this project we will explore different types of closures and fasteners used in adaptive and functional clothing. Sometimes small features in a clothing make a big difference"
 # keywords, a short list of subjects describing the collection, separated by semicolon, to appear in rich markup
 keywords: closures; fasteners; adaptive clothing; functional clothing
 # creator of the digital collection, to appear in meta tags; we typically use our GitHub usernames but feel free to just use your name
