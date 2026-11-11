@@ -1,0 +1,21 @@
+{%- if site.data.theme.title-style == 'buttons' -%}
+<span class="visually-hidden">{{ site.title | escape }}</span>
+<span aria-hidden="true">
+  {%- assign title_words = site.title | upcase | split: ' ' -%}
+  {%- for word in title_words -%}
+  <span class="title-word">
+    {%- assign letters = word | split: '' -%}
+    {%- for letter in letters -%}
+      {%- if letter == 'O' -%}
+      <img class="title-button" src="{{ site.data.theme.title-button-image | relative_url | escape }}" alt="" width="512" height="512">
+      {%- else -%}
+      {{- letter | escape -}}
+      {%- endif -%}
+    {%- endfor -%}
+  </span>
+  {%- unless forloop.last -%}{{ ' ' }}{%- endunless -%}
+  {%- endfor -%}
+</span>
+{%- else -%}
+{{- site.title | escape -}}
+{%- endif -%}

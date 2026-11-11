@@ -1,8 +1,7 @@
 display_name,stub,dropdown_parent
 Home,/,
-Browse,/browse.html,
-Closure Types,/subjects.html,
-Closure Locations,/locations.html,
+Browse Closures,/browse.html,
+Word Clouds,/word-clouds.html,
 Glossary,/glossary.html,
 Analysis,/analysis.html,
 Data,/data.html,

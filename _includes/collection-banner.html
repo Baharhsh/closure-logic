@@ -18,7 +18,11 @@
         - banner-sub-heading: smaller text below the heading, by default this is the site tagline.
 
 {%- endcomment -%}
-{% if page.banner-featured-image != false and page.banner-featured-image or page.layout == "home-infographic" %}
+{% assign show_featured_banner = page.banner-featured-image %}
+{% if page.layout == "home-infographic" and page.banner-featured-image == nil %}
+    {% assign show_featured_banner = true %}
+{% endif %}
+{% if show_featured_banner %}
     {% if page.banner-featured-image contains '/' %}
         {% assign jumboSrc = page.banner-featured-image | relative_url %}
         {% capture jumboLink %}{% endcapture %}
@@ -68,8 +72,8 @@
 {%- else -%}
 <div class="container">
     <div class="row align-items-center">
-        <div id="title" class="{% if site.organization-logo-banner %}col-md-9{% else %}col-12{% endif %}">
-            <h1 class="mt-2"><a class="text-dark" href="{{ '/' | relative_url }}" >{{ site.title }}</a></h1>	 
+        <div id="title" class="{% if site.organization-logo-banner %}col-md-9{% else %}col-12{% endif %}{% if page.layout == 'home-infographic' %} home-title{% endif %}{% if site.data.theme.title-style == 'buttons' %} title-style-buttons{% endif %}">
+            <h1 class="mt-2"><a class="text-dark" href="{{ '/' | relative_url }}" >{% include site-title.html %}</a></h1>
             {% if site.tagline %}<p>{{ site.tagline }}</p>{% endif %}
         </div>
         {% if site.organization-logo-banner %}

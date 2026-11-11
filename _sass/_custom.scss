@@ -2,3 +2,328 @@
     Put your custom SCSS here! 
     This allows you to override any CollectionBuilder or Bootstrap CSS without modifying the base theme files directly.
 */
+
+@use "sass:map";
+@use "theme-colors" as palette;
+
+// Sketchbook palette. Semantic button colors and body fonts live in _data/.
+:root {
+    --closure-paper: #f3ebf5;
+    --closure-surface: #fdfafd;
+    --closure-ink: #39333e;
+    --closure-plum: #654278;
+    --closure-muted: #625b68;
+    --closure-rule: #d6c7dc;
+    --bs-body-bg: var(--closure-paper);
+    --bs-body-color: var(--closure-ink);
+    --bs-border-color: var(--closure-rule);
+    --bs-link-color: var(--closure-plum);
+    --bs-link-color-rgb: 101, 66, 120;
+    --bs-link-hover-color: #34283e;
+    --bs-link-hover-color-rgb: 52, 40, 62;
+}
+
+body {
+    background-color: var(--closure-paper);
+    line-height: 1.65;
+}
+
+.site-masthead {
+    background-color: #e7dcec;
+    flex-shrink: 0;
+}
+
+h1, h2, h3, h4, h5, h6 {
+    font-family: Georgia, "Times New Roman", serif;
+    color: #34283e;
+    line-height: 1.25;
+}
+
+// The existing title and tagline form the masthead on every page.
+#title {
+    position: relative;
+    padding-block: clamp(2rem, 5vw, 4rem) 2rem;
+    text-align: center;
+
+    h1 {
+        margin: 0 0 0.75rem !important;
+        font-family: "Cabin Sketch", Georgia, serif;
+        font-weight: 700;
+        font-size: clamp(2.75rem, 8vw, 6.75rem);
+        letter-spacing: 0.035em;
+        line-height: 1.1;
+        text-transform: uppercase;
+
+        a {
+            color: #34283e !important;
+        }
+    }
+
+    p {
+        max-width: 42rem;
+        margin: 0 auto;
+        padding-inline: 0.5rem;
+        color: var(--closure-muted);
+        font-size: 1.05rem;
+        line-height: 1.5;
+        text-wrap: balance;
+    }
+
+}
+
+// The sketch masthead remains the default when the button style is disabled.
+#title.title-style-buttons h1 {
+    font-family: "Zen Loop", "Segoe UI", sans-serif;
+    font-weight: 400;
+    letter-spacing: 0.015em;
+
+    .title-word {
+        display: inline-block;
+        white-space: nowrap;
+    }
+
+    .title-button {
+        width: 0.68em;
+        height: 0.68em;
+        margin-inline: 0.025em;
+        vertical-align: -0.015em;
+        object-fit: contain;
+    }
+}
+
+// Let the home page title fill the masthead.
+#title.home-title {
+    h1 {
+        font-size: clamp(3.5rem, 12vw, 10rem);
+    }
+
+}
+
+// Keep the existing Bootstrap menu, dropdowns, search, and mobile toggle.
+.site-masthead > .navbar {
+    --bs-navbar-color: #625b68;
+    --bs-navbar-hover-color: #34283e;
+    --bs-navbar-active-color: #34283e;
+    padding-block: 0.6rem;
+    border: 0;
+
+    > .container, #page-nav {
+        justify-content: flex-end;
+    }
+
+    #page-nav {
+        gap: 1rem;
+    }
+
+    .navbar-nav {
+        margin-left: auto;
+        margin-right: 0 !important; // Override Bootstrap's me-auto utility.
+        align-items: flex-end;
+        text-align: right;
+    }
+
+    .nav-link {
+        padding-block: 0.45rem;
+        border-bottom: 2px solid transparent;
+        font-size: 1rem;
+        font-weight: 600;
+
+        &:hover, &.active {
+            border-bottom-color: var(--closure-plum);
+        }
+    }
+
+    .navbar-toggler {
+        min-height: 44px;
+        border-color: var(--closure-muted);
+    }
+}
+
+#nav-search {
+    width: 10rem;
+    max-width: 100%;
+}
+
+.form-control, .form-select, .dropdown-menu, .modal-content {
+    background-color: var(--closure-surface);
+    color: var(--closure-ink);
+    border-color: var(--closure-rule);
+}
+
+.form-control, .form-select {
+    border-color: #8b7695;
+}
+
+.form-control::placeholder {
+    color: var(--closure-muted);
+    opacity: 1;
+}
+
+.form-control:focus, .form-select:focus {
+    background-color: var(--closure-surface);
+    border-color: var(--closure-plum);
+    box-shadow: 0 0 0 0.2rem rgba(101, 66, 120, 0.2);
+}
+
+.dropdown-item {
+    color: var(--closure-ink);
+
+    &:hover, &:focus {
+        background-color: var(--closure-paper);
+        color: #34283e;
+    }
+
+    &.active, &:active {
+        background-color: var(--closure-plum);
+        color: #fff;
+    }
+}
+
+.btn {
+    border-radius: 0.3rem;
+    font-weight: 600;
+}
+
+// Bootstrap's more specific pressed-state rules read these variables.
+// Derive them from the configured Search button color rather than its defaults.
+@if map.has-key(palette.$theme-colors, "success") {
+    $search-active: palette.shade-color(map.get(palette.$theme-colors, "success"), 20%);
+
+    #filterButton {
+        --bs-btn-active-bg: #{$search-active};
+        --bs-btn-active-border-color: #{$search-active};
+        --bs-btn-active-color: #{palette.color-contrast($search-active)};
+    }
+}
+
+a:focus-visible, button:focus-visible, input:focus-visible,
+select:focus-visible, textarea:focus-visible {
+    outline: 3px solid var(--closure-plum);
+    outline-offset: 3px;
+}
+
+main a:not(.btn):not(.nav-link):not(.dropdown-item) {
+    text-decoration: underline;
+    text-underline-offset: 0.18em;
+}
+
+.card {
+    --bs-card-bg: var(--closure-surface);
+    --bs-card-border-color: var(--closure-rule);
+    --bs-card-cap-bg: var(--closure-paper);
+}
+
+.home-introduction {
+    max-width: 54rem;
+    margin: 2rem auto 3rem;
+}
+
+// Home page closure illustrations retain their full shape at every screen size.
+.closure-types {
+    padding-block: 1.5rem 3rem;
+
+    > header {
+        max-width: 48rem;
+        margin-inline: auto;
+        padding-bottom: 1rem;
+        text-align: center;
+    }
+
+    .lead {
+        font-size: 1.125rem;
+        color: var(--closure-muted);
+    }
+
+    .closure-type-card {
+        overflow: hidden;
+        border-radius: 0.4rem;
+        box-shadow: 0 3px 0 rgba(101, 66, 120, 0.05);
+    }
+
+    .closure-type-card-image {
+        width: 100%;
+        aspect-ratio: 3 / 2;
+        object-fit: contain;
+        padding: 1rem;
+        background-color: #fff;
+        color: #595959;
+        border-bottom: 1px solid var(--closure-rule);
+    }
+
+}
+
+footer.bg-black {
+    background-color: #34283e !important;
+
+    .border-white {
+        border-color: #796682 !important;
+    }
+
+    a:focus-visible {
+        outline-color: var(--closure-paper);
+    }
+}
+
+#skip-to-content a {
+    background-color: #34283e;
+    transition: none;
+}
+
+@media (max-width: 991.98px) {
+    #nav-search {
+        width: 100%;
+        max-width: 16rem;
+        margin-left: auto;
+        margin-block: 0.5rem;
+    }
+}
+
+// Keep cloud terms white while preserving the purple hover treatment.
+#cloud-div-closure-location,
+#cloud-div-apparel-category,
+#cloud-div-intended-user-group {
+    margin-bottom: 3.5rem !important; // Override the cloud include's my-4 utility.
+
+    .btn-outline-primary:not(:hover):not(:focus):not(:active) {
+        background-color: #fff;
+    }
+}
+
+.vocabulary-tables {
+    .vocabulary-section {
+        margin-block: 2.5rem;
+    }
+
+    .table {
+        --bs-table-bg: var(--closure-surface);
+        --bs-table-color: var(--closure-ink);
+        --bs-table-striped-bg: var(--closure-paper);
+        --bs-table-striped-color: var(--closure-ink);
+        --bs-table-border-color: var(--closure-rule);
+        table-layout: fixed;
+        min-width: 36rem;
+        overflow-wrap: anywhere;
+    }
+
+    thead th {
+        background-color: #e7dcec;
+        color: #34283e;
+
+        &:first-child, &:last-child {
+            width: 25%;
+        }
+    }
+
+    .vocabulary-table-scroll:focus-visible {
+        outline: 3px solid var(--closure-plum);
+        outline-offset: 3px;
+    }
+}
+
+@media (prefers-reduced-motion: reduce) {
+    *, *::before, *::after {
+        animation: none !important;
+        transition: none !important;
+        scroll-behavior: auto !important;
+    }
+}

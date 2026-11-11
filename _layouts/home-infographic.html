@@ -1,28 +1,39 @@
 ---
-# Default home page with boxes providing collection stats
+# Home page cards driven by _data/closure-types.csv
 layout: page
 ---
-<div class="row">
-
-  <div class="col-md-8">
-
-    {% include index/description.html %}
-    {% include index/carousel.html title="Sample Items" %}
-    
-  </div>
-  <div class="col-md-4">  
-
-    {% include index/featured-terms.html field="subject" title="Top Closure Types" btn-color="primary" %}
-
-    {% include index/featured-terms.html field="location" title="Closure Locations" btn-color="outline-secondary" %}
-    
-    {% include index/featured-terms.html field="apparel_category" title="Apparel Categories" btn-color="outline-secondary" %}
-
-  </div>
-  <div class="col-md-12">
-
-    {% include index/data-download.html %}
-
-  </div>
-
+{% if content != blank %}
+<div class="home-introduction">
+  {{ content }}
 </div>
+{% endif %}
+<section class="closure-types" aria-labelledby="closure-types-heading">
+  <header class="mb-4">
+    <h1 id="closure-types-heading">Explore closure types</h1>
+    <p class="lead mb-0">Discover the closures and fasteners used in adaptive and functional clothing.</p>
+  </header>
+  <div class="row row-cols-1 row-cols-md-2 row-cols-xl-3 g-4">
+    {% for closure in site.data['closure-types'] %}
+    {% assign image_location = closure.image_location | strip %}
+    <div class="col">
+      <article class="card closure-type-card h-100" aria-labelledby="closure-type-{{ forloop.index }}">
+        {% if image_location != empty %}
+        <img class="card-img-top closure-type-card-image" src="{{ image_location | relative_url | escape }}" alt="Illustration of {{ closure.closure_type | escape }}" loading="lazy" decoding="async">
+        {% else %}
+        <div class="closure-type-card-image d-flex align-items-center justify-content-center px-3">
+          <p class="mb-0">Image not yet available</p>
+        </div>
+        {% endif %}
+        <div class="card-body d-flex flex-column p-4">
+          <h2 id="closure-type-{{ forloop.index }}" class="card-title h4">{{ closure.closure_type | escape }}</h2>
+          <p class="card-text">{{ closure.definition | escape }}</p>
+          {% if closure.synonyms != blank %}
+          <p class="card-text mb-4"><strong>Also known as:</strong> {{ closure.synonyms | escape }}</p>
+          {% endif %}
+          <a class="btn btn-outline-primary mt-auto align-self-center" href="{{ '/browse.html' | relative_url }}#closure_type:{{ closure.closure_type | url_param_escape }}">Browse examples<span class="visually-hidden"> of {{ closure.closure_type | escape }}</span></a>
+        </div>
+      </article>
+    </div>
+    {% endfor %}
+  </div>
+</section>
