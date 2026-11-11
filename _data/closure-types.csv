@@ -1,0 +1,21 @@
+closure_type,definition,synonyms,image_location
+Magnetic fastener,"Mating components are drawn together by magnetic attraction, including magnets concealed in a garment seam or placket.","magnetic button, MagnaReady, Hana Fasteners",/assets/img/magnetic-fastener.png
+Hook-and-loop/Velcro,Opposing hook and loop surfaces interlock when pressed together and separate when peeled apart.,"hook-and-loop tape, touch fastener, VELCRO",/assets/img/hook-and-loop-velcro.png
+Snap,Mating stud and socket parts engage under pressure.,"press stud, popper, snap button",/assets/img/snap.png
+Button and buttonhole,A button passes through an opening formed in the fabric.,"functional button, worked buttonhole",/assets/img/button-and-buttonhole.png
+Zipper (separating),A slider joins two tracks that can disengage fully at an end. A two-way zipper can also be separating.,"open-end zip, fully separating zip",/assets/img/zipper-separating.png
+Zipper (non-separating),A slider opens and closes tracks that remain joined at one or both ends. The number of sliders is coded separately in descriptive text.,"closed-end zip, non-separating access zip",/assets/img/zipper-non-separating.png
+Hook-and-eye,"A hook engages a small eye or loop, often on an undergarment or concealed opening.","hook and eye, side hook-and-eye fastening",/assets/img/hook-and-eye.png
+Hook-and-dee,"A hook engages a D-shaped mating ring, as in some turnout closures.","hook and D-ring, hook and dee",/assets/img/hook-and-dee.png
+Buckle,Mating hardware secures or adjusts a strap through engagement or threading. Describe the actual actuation under Method of Operation.,"side-release buckle, strap buckle",/assets/img/buckle.png
+Drawcord/toggle,A cord gathers or adjusts an opening. It is held in position by a cord stop or toggle when provided.,"drawstring, cord lock, cinch cord",/assets/img/drawcord-toggle.png
+Mechanical hinge,"A pivoting mechanism changes an opening between configurations, such as open and closed footwear positions.","bi-stable heel hinge, pivoting heel",/assets/img/mechanical-hinge.png
+Elastic/pull-on (no fastener),Stretch or garment geometry allows entry and then retains fit without discrete fastening hardware.,"elastic opening, stretch face opening",/assets/img/elastic-pull-on-no-fastener.png
+Overlap panel,Overlapping panels provide coverage or access control. Code other fastening elements separately when documented.,"wrap panel, open-back overlap",/assets/img/overlap-panel.png
+Tie/lace,"Flexible ties or laces secure an opening by tying or threading, as documented by the source.","fabric ties, lacing, tie-back",/assets/img/tie-lace.png
+Toggle-and-loop,An elongated toggle is inserted through a separate loop to hold two garment sides together.,"duffel toggle, toggle and loop",/assets/img/toggle-and-loop.png
+Rotary dial-and-cable,A rotary dial tensions a cable or lace routed across an opening.,"BOA Fit System, dial lacing",/assets/img/rotary-dial-and-cable.png
+Frog closure,"A loop engages a knot or ornamental button on the opposite panel, commonly on a decorative braid or cord base.","frog fastening, Chinese knot closure",/assets/img/frog-closure.png
+Clip/clamp,A clip or clasp catches and retains a mating part. Use for documented clip mechanisms such as nursing clips.,"nursing clip, drop-cup clasp",/assets/img/clip-clamp.png
+Hook-and-bar,"A hook engages a straight mating bar, commonly at a waistband. Distinguish it from hooks that engage an eye or a D-ring.","waistband hook and bar, trouser hook",/assets/img/hook-and-bar.png
+Button-and-loop,A button passes through a separate textile or cord loop instead of a worked hole in the garment fabric.,"fabric loop and button, rouleau-loop fastening",/assets/img/button-and-loop.png
