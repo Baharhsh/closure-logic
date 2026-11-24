@@ -202,6 +202,17 @@ select:focus-visible, textarea:focus-visible {
     outline-offset: 3px;
 }
 
+// Show active search terms with the same solid yellow as their hover state.
+@if map.has-key(palette.$theme-colors, "success") {
+    $filter-color: map.get(palette.$theme-colors, "success");
+
+    #activeFilters .btn-outline-success {
+        color: palette.color-contrast($filter-color);
+        background-color: $filter-color;
+        border-color: $filter-color;
+    }
+}
+
 main a:not(.btn):not(.nav-link):not(.dropdown-item) {
     text-decoration: underline;
     text-underline-offset: 0.18em;
@@ -211,6 +222,26 @@ main a:not(.btn):not(.nav-link):not(.dropdown-item) {
     --bs-card-bg: var(--closure-surface);
     --bs-card-border-color: var(--closure-rule);
     --bs-card-cap-bg: var(--closure-paper);
+}
+
+// Keep Browse cards even within each row and reserve space for their images.
+#browseItems {
+    .item {
+        display: flex;
+    }
+
+    .card {
+        width: 100%;
+    }
+
+    .card-img-top {
+        height: 16rem;
+        object-fit: contain;
+    }
+
+    .card-title {
+        margin-bottom: 1rem;
+    }
 }
 
 .home-introduction {
